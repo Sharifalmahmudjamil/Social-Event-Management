@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link,  useLocation,  useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
@@ -13,6 +13,8 @@ import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
 
     const { signIn ,googleSignIn}= useContext(AuthContext)
+
+    const location=useLocation();
 
     // google signIn
     const handleGoogleLogin=()=>{
@@ -39,37 +41,40 @@ const Login = () => {
         .then(result=>{
           console.log(result.user);
           e.target.reset();
-          navigate("/")
+          
+
+          navigate(location?.state? location.state : '/')
+
         })
         .catch(error=>{
             console.error(error)
             swal("Your Email and password invalid.please Check your Email and Password ")
         })
 
-        // email and password validation
-        if(email,password){
-            signIn(email,password)
-            .then(result=>console.log(result.user))
+        // // email and password validation
+        // if(email,password){
+        //     signIn(email,password)
+        //     .then(result=>console.log(result.user))
           
             
-        }
-        else{
-          setError("")
+        // }
+        // else{
+        //   setError("")
           
-          if(email){
-            signIn(email,password)
-            .then(result=>console.log(result.user))
+        //   if(email){
+        //     signIn(email,password)
+        //     .then(result=>console.log(result.user))
             
-            .catch(error=>console.error(error))
+        //     .catch(error=>console.error(error))
             
             
 
            
 
             
-        }
+        // }
     
-        }
+        // }
         
        
         
@@ -106,9 +111,14 @@ const Login = () => {
         </div>
                 <div className="  gap-2 mt-4 ">
                     
+                   
+                
                     <button onClick={handleGoogleLogin} className="btn btn-neutral w-full">
                     <FaGoogle ></FaGoogle>
                       Log in with Google</button>
+                    
+                    
+                    
                   </div>
       </form>
       {

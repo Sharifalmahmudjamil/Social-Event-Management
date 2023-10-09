@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Footer from "../Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
 
@@ -39,6 +40,7 @@ const AllAbout = () => {
               </div>
             </div>
           </div>
+          <Footer></Footer>
             
         </div>
     );

@@ -25,6 +25,7 @@ const Navbar = () => {
     <li className="text-white"><NavLink to="/">Home</NavLink></li>
     <li className="text-white"><NavLink to="/about">About</NavLink></li>
     <li className="text-white"><NavLink to="/blog">Blog</NavLink></li>
+    <li className="text-white"><NavLink to="/gallery">Gallery</NavLink></li>
      
     </>
     return (
@@ -39,8 +40,8 @@ const Navbar = () => {
         {navLinks}
       </ul>
     </div>
-    <img className="w-[100px] " src="https://i.ibb.co/HdmLgqw/312-E-logo-Social-Events-COLORE-1920w.png" alt="" />
-    <a className="btn btn-ghost normal-case text-2xl text-white"><span className="text-lime-500">Social</span> Events</a>
+    <img className=" lg:w-[100px]  " src="https://i.ibb.co/HdmLgqw/312-E-logo-Social-Events-COLORE-1920w.png" alt="" />
+    <a className="btn btn-ghost normal-case lg:text-2xl  text-white"><span className="text-lime-500 ">Social</span> Events</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -49,6 +50,12 @@ const Navbar = () => {
   </div>
 
   <div className="navbar-end">
+  
+  {/* <div className="">
+  {
+      user&& <span className="text-white ">{user.email}</span>
+    }
+  </div> */}
 
             {
               user?

@@ -12,6 +12,9 @@ import Details from './Pages/Details/Details';
 import AllAbout from './Pages/About/AllAbout';
 import Register from './Pages/Register/Register';
 import AuthProviders from './Providers/AuthProviders';
+import PrivateRoute from './Route/PrivateRoute';
+import Blog from './Pages/Blog/Blog';
+import OurGallery from './Pages/OurGallary/OurGallery';
 
 const router = createBrowserRouter([
   {
@@ -25,12 +28,16 @@ const router = createBrowserRouter([
       },
       {
         path:"/cards/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute>
+          <Details></Details>
+        </PrivateRoute>,
         loader:()=>fetch('/social.json'),
       },
       {
         path:"/about",
-        element:<AllAbout></AllAbout>
+        element:<PrivateRoute>
+          <AllAbout></AllAbout>
+        </PrivateRoute>
       },
       {
         path:"/login",
@@ -39,6 +46,14 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/blog",
+        element:<Blog></Blog>
+      },
+      {
+        path:"/gallery",
+        element:<OurGallery></OurGallery>
       }
 
     ]
