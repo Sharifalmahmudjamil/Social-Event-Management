@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Shared/Navbar/Navbar";
+// import Navbar from "../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import swal from 'sweetalert';
@@ -13,6 +13,9 @@ const Register = () => {
 
     // eslint-disable-next-line no-unused-vars
     const [error,setError]=useState("");
+
+    
+    
     
 
     const handleRegister=e=>{
@@ -30,19 +33,28 @@ const Register = () => {
         {
              // console.log("success")
     //   setError("password at least 6 ")
-      swal("Password Minimum eight characters, at least one letter, one number and one special character");
+      swal("Password Minimum six characters, at least one letter, one number and one special character");
         }
         else{
             setError("");
+            
             
             if(email){
                 createUser(email,password)
                 .then(result=>console.log(result.user))
                 
-                .catch(error=>console.error(error))
+                 
 
-                toast ("Create Account Successfully , Please Login")
+                .catch(error=>console.error(error))
+               
+
+                toast("Create Account Successfully , Please Login");
+                
+                
+                
             }
+            
+        
             
             
         }
@@ -57,6 +69,9 @@ const Register = () => {
     createUser(email,password)
     .then(result=>{
         console.log(result.user)
+        e.target.reset()
+        
+
     })
     .catch(error=>{
         console.error(error)
@@ -68,7 +83,7 @@ const Register = () => {
 
     return (
         <div>
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         <div className="hero min-h-screen bg-base-200">
             
 <div className="hero-content flex-col lg:w-1/2 ">
@@ -94,7 +109,7 @@ const Register = () => {
     </div>
     <div className="form-control">
       <label className="label">
-        <span className="label-text">Password</span>
+        <span className="label-text">Password <small className="text-rose-600">Password Minimum six characters, at least one letter, one number and one special character</small> </span>
       </label>
       <input type="Password" name="password" placeholder="Enter Your Password" className="input input-bordered" required />
       <label className="label">
@@ -104,9 +119,15 @@ const Register = () => {
     <div className="form-control mt-6">
       <button className="btn btn-error">Create an account</button>
     </div>
+    <div className="form-control mt-6">
+      <Link to="/" className="btn btn-error">GO BACK HOME</Link>
+    </div>
   </form>
+
   <p className="text-center mb-8 p-5">Already have an Account? <Link className="text-[#FF444A] font-bold" to="/login">Please Login</Link></p>
+       
 </div>
+
 </div>
 <ToastContainer />
 </div>

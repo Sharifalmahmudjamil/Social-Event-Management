@@ -1,14 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
 import {  useState } from "react";
+import swal from 'sweetalert';
+import { FaGoogle } from 'react-icons/fa';
+
 
 
 
 
 const Login = () => {
-    
+
+    const { signIn ,googleSignIn}= useContext(AuthContext)
+
+    // google signIn
+    const handleGoogleLogin=()=>{
+      googleSignIn()
+      .then(result=>console.log(result.user))
+      .catch(error=>{
+        console.error(error)
+      })
+    }
     // eslint-disable-next-line no-unused-vars
     const [error,setError]=useState("");
+    const navigate=useNavigate();
 
 
     const handleLogin=e=>{
@@ -18,15 +34,44 @@ const Login = () => {
         const email= form.get("email");
         const password= form.get("password");
         console.log(email,password);
+        // sign in
+        signIn(email,password)
+        .then(result=>{
+          console.log(result.user);
+          e.target.reset();
+          navigate("/")
+        })
+        .catch(error=>{
+            console.error(error)
+            swal("Your Email and password invalid.please Check your Email and Password ")
+        })
 
         // email and password validation
-        // if(email,password){
-        //     createUser(email,password)
-        //     .then(result=>console.log(result.user))
-        //     .catch(error=>
-        //         setError(error.message));
-        //         // swal("Email and Password are not valid. please check Your Email and password")
-        // }
+        if(email,password){
+            signIn(email,password)
+            .then(result=>console.log(result.user))
+          
+            
+        }
+        else{
+          setError("")
+          
+          if(email){
+            signIn(email,password)
+            .then(result=>console.log(result.user))
+            
+            .catch(error=>console.error(error))
+            
+            
+
+           
+
+            
+        }
+    
+        }
+        
+       
         
     }
 
@@ -40,7 +85,7 @@ const Login = () => {
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body">
-       <p>{error}</p>
+       
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -59,7 +104,16 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn btn-secondary">Login</button>
         </div>
+                <div className="  gap-2 mt-4 ">
+                    
+                    <button onClick={handleGoogleLogin} className="btn btn-neutral w-full">
+                    <FaGoogle ></FaGoogle>
+                      Log in with Google</button>
+                  </div>
       </form>
+      {
+        error&& <p>{swal}</p>
+      }
       <p className="text-center mb-8 p-5">Do not Have An Account ? <Link className="text-rose-600 font-bold" to="/register">Create an Account</Link></p>
     </div>
   </div>
