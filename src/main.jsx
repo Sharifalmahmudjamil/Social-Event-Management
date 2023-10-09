@@ -15,6 +15,7 @@ import AuthProviders from './Providers/AuthProviders';
 import PrivateRoute from './Route/PrivateRoute';
 import Blog from './Pages/Blog/Blog';
 import OurGallery from './Pages/OurGallary/OurGallery';
+import ClientReview from './Pages/ClientReview/ClientReview';
 
 const router = createBrowserRouter([
   {
@@ -49,11 +50,19 @@ const router = createBrowserRouter([
       },
       {
         path:"/blog",
-        element:<Blog></Blog>
+        element:<PrivateRoute>
+          <Blog></Blog>
+        </PrivateRoute>
       },
       {
         path:"/gallery",
-        element:<OurGallery></OurGallery>
+        element:<PrivateRoute>
+          <OurGallery></OurGallery>
+        </PrivateRoute>
+      },
+      {
+        path:"/review",
+        element:<ClientReview></ClientReview>
       }
 
     ]

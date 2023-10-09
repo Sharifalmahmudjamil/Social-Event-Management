@@ -5,6 +5,9 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import swal from 'sweetalert';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+  import { FaEye ,FaEyeSlash } from 'react-icons/fa';
+
+
 
 
 const Register = () => {
@@ -13,6 +16,7 @@ const Register = () => {
 
     // eslint-disable-next-line no-unused-vars
     const [error,setError]=useState("");
+    const [showPassword,setShowPassword]=useState(false);
 
     
     
@@ -26,7 +30,8 @@ const Register = () => {
         const name= form.get("name");
         const email= form.get("email");
         const password= form.get("password");
-        console.log(email,password,name);
+        const accepted=form.get("terms");
+        console.log(email,password,name,accepted);
 
         // password validation
         if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password))
@@ -35,8 +40,13 @@ const Register = () => {
     //   setError("password at least 6 ")
       swal("Password Minimum six characters, at least one letter, one number and one special character");
         }
+        else if(!accepted)
+        toast ("Please Accept our Terms And Condition!!")
+      
         else{
             setError("");
+
+          
             
             
             if(email){
@@ -49,10 +59,12 @@ const Register = () => {
                
 
                 toast("Create Account Successfully , Please Login");
+                e.target.reset();
                 
-                
+           
                 
             }
+           
             
         
             
@@ -68,7 +80,7 @@ const Register = () => {
           // create user
     createUser(email,password)
     .then(result=>{
-        console.log(result.user)
+        console.log(result.user) 
         e.target.reset()
         
 
@@ -76,6 +88,9 @@ const Register = () => {
     .catch(error=>{
         console.error(error)
     });
+
+  
+
 
     }
 
@@ -109,13 +124,38 @@ const Register = () => {
     </div>
     <div className="form-control">
       <label className="label">
-        <span className="label-text">Password <small className="text-rose-600">Password Minimum six characters, at least one letter, one number and one special character</small> </span>
+    <div className="flex relative ">
+    <span className="label-text">Password <small className="text-rose-600">Password Minimum six characters, at least one letter, one number and one special character</small> </span>
+        <div onClick={()=>setShowPassword (!showPassword)}>
+      {
+       showPassword? <FaEyeSlash className="absolute mt-16 -ml-5 "></FaEyeSlash>: <FaEye className="absolute mt-16 -ml-5"></FaEye>
+        
+        
+        }
+
+      </div>
+    </div>
       </label>
-      <input type="Password" name="password" placeholder="Enter Your Password" className="input input-bordered" required />
+
+    
+      <input 
+      type={ showPassword ?"password": "text"}
+      name="password" 
+      placeholder="Enter Your Password" 
+      className="input input-bordered" required />
+     
+     
+
       <label className="label">
         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
       </label>
+      <div className="mb-2">
+      <input type="checkbox" name="terms" id="terms" />
+      <label className="ml-2" htmlFor="terms">Accept Our <a className="text-[#FF444A]" href="">Terms And Condition</a> </label>
+
+      </div>
     </div>
+    
     <div className="form-control mt-6">
       <button className="btn btn-error">Create an account</button>
     </div>

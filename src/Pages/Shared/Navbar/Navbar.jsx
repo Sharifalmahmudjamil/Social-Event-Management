@@ -41,7 +41,10 @@ const Navbar = () => {
       </ul>
     </div>
     <img className=" lg:w-[100px]  " src="https://i.ibb.co/HdmLgqw/312-E-logo-Social-Events-COLORE-1920w.png" alt="" />
+
+    <Link to="/">
     <a className="btn btn-ghost normal-case lg:text-2xl  text-white"><span className="text-lime-500 ">Social</span> Events</a>
+    </Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -53,13 +56,14 @@ const Navbar = () => {
   
   {/* <div className="">
   {
-      user&& <span className="text-white ">{user.email}</span>
+      user&& <span className="text-white ">{user.displayName}</span>
     }
+  
   </div> */}
 
             {
               user?
-              <button onClick={handleSignOut} className="btn">SignOut</button>
+              <button onClick={handleSignOut} className="lg:btn">SignOut</button>
               :
               <Link to="/login">
               <button className="btn">Login</button>

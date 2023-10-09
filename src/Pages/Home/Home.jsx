@@ -4,6 +4,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 import Services from "../Shared/Services/Services";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
+import ClientReview from "../ClientReview/ClientReview";
 
 
 
@@ -17,7 +18,7 @@ const Home = () => {
             <Services cards={cards}></Services>
             <div className="mx-auto container">
             <About></About>
-            
+            <ClientReview></ClientReview>
             <Footer></Footer>
             
             </div>

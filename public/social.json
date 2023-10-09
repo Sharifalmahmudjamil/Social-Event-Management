@@ -3,28 +3,28 @@
       "id": 1,
       "image": "https://i.ibb.co/tDPz2vy/birthday-concept-with-friends-table.jpg",
       "title": "Birthday Parties",
-      "price": "$20",
+      "price": "$200",
       "description": "At our event organization company, we specialize in crafting unforgettable birthday celebrations tailored to your unique preferences. We understand that birthdays are special moments, and we're here to make them extraordinary.From intimate gatherings to grand extravaganzas, our team has the expertise to plan and execute every detail flawlessly. We start by working closely with you to understand your vision, whether it's a themed party, a surprise bash, or a milestone celebration.Our services encompass venue selection, decor, catering, entertainment, and all the logistics to ensure a seamless experience for you and your guests. We pride ourselves on creativity and attention to detail, ensuring that every aspect of your event reflects your personality and style.With our dedication and passion for event planning, we aim to turn your birthday dreams into reality. Leave the stress behind and let us handle the planning, so you can focus on enjoying your special day to the fullest. Contact us today to start planning your next unforgettable birthday celebration!"
     },
     {
       "id": 2,
       "image":   "https://i.ibb.co/pdvp3yC/wedding-archway-backyard-happy-wedding-couple-outdoors-before-wedding-ceremony.jpg",
       "title": "Weddings",
-      "price": "$50",
+      "price": "$400",
       "description": "At our wedding event organization company, we specialize in creating the perfect day for couples in love. Your wedding day is one of the most significant moments in your life, and we are here to make it a seamless, magical, and memorable experience.From the moment you say 'yes' to the moment you say 'I do,' our dedicated team is there to guide you through every step of the planning process. We work closely with you to understand your vision, style, and preferences, ensuring that your wedding day is a true reflection of your love story.Our services encompass venue selection, exquisite decor, catering, entertainment, floral arrangements, and all the intricate details that go into making your wedding day special. We take pride in our ability to turn dreams into reality and create a day that exceeds your expectations.With our experienced planners by your side, you can relax and savor every moment of your wedding, knowing that everything is taken care of. Let us transform your vision into a beautiful reality and create cherished memories that will last a lifetime. Contact us today to start planning your dream wedding."
     },
     {
       "id": 3,
       "image":"https://i.ibb.co/tcJV9hT/celebration-birthday-party-surprise-events-icon-word.jpg",
       "title": "Anniversaries",
-      "price": "$60",
+      "price": "$250",
       "description": "At our anniversary event organization company, we specialize in commemorating love and commitment. Anniversaries are milestones that deserve to be celebrated in a memorable and meaningful way, and we are here to make that happen.Whether you're marking your first year together or a golden jubilee, we understand the significance of your journey. Our dedicated team will work closely with you to create an anniversary celebration that perfectly captures your unique love story.From intimate gatherings to grand affairs, we offer a range of services, including venue selection, elegant decor, gourmet catering, live entertainment, and personalized touches that reflect your relationship. We take pride in our attention to detail, ensuring that every aspect of your event is a heartfelt tribute to your journey together.With our experienced event planners at your side, you can relax and enjoy this special occasion with your loved ones, knowing that we've taken care of everything. Let us create a memorable anniversary celebration that honors your love and creates lasting memories. Contact us today to start planning your anniversary event."
     },
     {
       "id": 4,
       "image": "https://i.ibb.co/Bzpc8Vs/groom-putting-ring-bride-s-finger.jpg",
       "title": "Engagement Parties",
-      "price": "$70",
+      "price": "$270",
       "description": "At our event organization company, we specialize in crafting exquisite engagement parties that celebrate the beginning of a beautiful journey together. Your engagement marks a significant step toward a lifetime of love and happiness, and we are here to make it a remarkable and joyful occasion.Our experienced team understands the importance of this special moment and will work closely with you to create an engagement party that reflects your unique style and story. Whether you envision an intimate gathering or a lavish celebration, we have the expertise to make it unforgettable.Our services encompass venue selection, tasteful decor, delectable catering, entertainment, and personalized touches that capture the essence of your love. We pay meticulous attention to every detail to ensure that your engagement party is a true reflection of your excitement and commitment. With our dedicated planners by your side, you can relax and cherish this moment with your loved ones, knowing that we've taken care of everything. Let us create a memorable engagement party that sets the stage for a lifetime of love and happiness. Contact us today to start planning your engagement celebration."
       
     },
@@ -32,7 +32,7 @@
       "id": 5,
       "image": "https://i.ibb.co/ryYzWp5/people-outdoors-garden-celebration-senior-birthday-party.jpg",
       "title": "Retirement Parties",
-      "price": "$35",
+      "price": "$350",
       "description": "At our event organization company, we specialize in orchestrating memorable retirement parties that honor a career of hard work, dedication, and achievement. Retirement marks a significant life transition, and we are here to make it a joyous and meaningful celebration.Our experienced team understands the importance of this milestone and will work closely with you to create a retirement party that reflects the retiree's unique journey and accomplishments. Whether you envision an elegant soirée or a relaxed gathering, we have the expertise to bring your vision to life. Our services encompass venue selection, tasteful decor, gourmet catering, entertainment, and personalized touches that pay tribute to the retiree's career and passions. We pay meticulous attention to every detail to ensure that your celebration is a heartfelt farewell and a warm welcome to the next chapter.With our dedicated planners at your side, you can relax and enjoy this special occasion with your loved ones, knowing that we've taken care of everything. Let us create a memorable retirement party that honors the retiree and sets the stage for a well-deserved future of leisure and fulfillment. Contact us today to start planning your retirement celebration."
       
     },
@@ -40,7 +40,7 @@
       "id": 6,
       "image": "https://i.ibb.co/mD0dnBq/What-To-Wear-To-A-Baby-Shower-scaled.jpg",
       "title": "Baby Shower",
-      "price": "$25",
+      "price": "$250",
       "description": "At our event organization company, we specialize in creating heartwarming and memorable baby showers to celebrate the impending arrival of a precious bundle of joy. Welcoming a new life into the world is a momentous occasion, and we are here to make it a delightful and cherished experience.Our dedicated team understands the significance of this special day and will work closely with you to craft a baby shower that radiates love and joy. Whether you envision a traditional gathering or a modern-themed event, we have the expertise to bring your vision to life.Our services encompass venue selection, charming decor, delightful catering, fun games and activities, and all the thoughtful details that make a baby shower truly special. We pay meticulous attention to every aspect to ensure that your celebration is a heartfelt tribute to the parents-to-be and their growing family.With our experienced planners at your side, you can relax and enjoy this beautiful occasion with your loved ones, knowing that we've taken care of everything. Let us create a memorable baby shower that captures the essence of love, excitement, and anticipation. Contact us today to start planning your baby shower celebration."
       
     }

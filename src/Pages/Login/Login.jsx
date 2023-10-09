@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import {  useState } from "react";
 import swal from 'sweetalert';
-import { FaGoogle } from 'react-icons/fa';
+import { FaGoogle,FaEye ,FaEyeSlash } from 'react-icons/fa';
 
 
 
@@ -26,6 +26,7 @@ const Login = () => {
     }
     // eslint-disable-next-line no-unused-vars
     const [error,setError]=useState("");
+    const [showPassword,setShowPassword]=useState(false);
     const navigate=useNavigate();
 
 
@@ -98,10 +99,25 @@ const Login = () => {
           <input type="Email" name="email" placeholder="Email" className="input input-bordered" required />
         </div>
         <div className="form-control">
-          <label className="label">
+        <div>
+        <label className="label">
+            
             <span className="label-text">Password</span>
+            <div onClick={()=>setShowPassword (!showPassword)}>
+      {
+       showPassword? <FaEyeSlash className="absolute mt-8 -ml-5 "></FaEyeSlash>: <FaEye className="absolute mt-8 -ml-5"></FaEye>
+        
+        
+        }
+
+      </div>
           </label>
-          <input type="Password" name="password" placeholder="Password" className="input input-bordered" required />
+        </div>
+          <input 
+         type={ showPassword ?"password": "text"}
+          name="password"
+           placeholder="Password" 
+           className="input input-bordered" required />
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
