@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProviders";
 import {  useState } from "react";
 import swal from 'sweetalert';
 import { FaGoogle,FaEye ,FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -83,6 +84,7 @@ const Login = () => {
 
     return (
         <div>
+          <Helmet> <title>Social Events | Login</title></Helmet>
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:w-1/2 ">

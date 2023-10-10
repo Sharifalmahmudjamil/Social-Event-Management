@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import SingleDetails from "./SingleDetails";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -24,6 +25,7 @@ const Details = () => {
     return (
         <div>
             <div>
+            <Helmet> <title>Social Events | Details</title></Helmet>
             <Navbar></Navbar>
             </div>
             <div className="mx-auto container">

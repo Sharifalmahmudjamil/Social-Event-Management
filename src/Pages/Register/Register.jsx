@@ -6,6 +6,7 @@ import swal from 'sweetalert';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
   import { FaEye ,FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -98,7 +99,8 @@ const Register = () => {
 
     return (
         <div>
-        {/* <Navbar></Navbar> */}
+          <Helmet> <title>Social Events | Register</title></Helmet>
+     
         <div className="hero min-h-screen bg-base-200">
             
 <div className="hero-content flex-col lg:w-1/2 ">

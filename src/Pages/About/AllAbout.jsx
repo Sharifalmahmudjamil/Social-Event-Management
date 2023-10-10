@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Helmet } from "react-helmet-async";
 import Footer from "../Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
@@ -6,6 +7,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 const AllAbout = () => {
     return (
         <div>
+          <Helmet> <title>Social Events | About</title></Helmet>
             <Navbar></Navbar>
 
             <div className="hero min-h-screen bg-slate-200 mt-6">
