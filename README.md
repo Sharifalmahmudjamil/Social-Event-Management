@@ -1,19 +1,19 @@
-Question: Add at least five bullet points mentioning different features and functionalities of your website.
+# Question: Add at least five bullet points mentioning different features and functionalities of your website.
 
 ANS: This Assignment is Social Events organizers.and I have add five features and functionalities of My website.
 
-# Registration and Login Page:
- Allow registered users to create and manage their login page and access a personalized social events.
- # Our Service:
- When user login then user watching Our service section and more description.
- # Client Review:
- In this section client review and all user see this section.
- # Private Route:
- In My website i have using Private Route.when  user login then user can see the all section.otherwise user see some section.
- # Firebase:
- In my Website I have using Firebase. 
+ 1. Registration and Login Page: Allow registered users to create and manage their login page and access a personalized social events.
+
+ 2. Our Service: When user login then user watching Our service section and more description.
+
+ 3. Client Review: In this section client review and all user see this section.
+
+4. Private Route: In My website i have using Private Route.when  user login then user can see the all section.otherwise user see some section.
+
+5. Firebase: In my Website I have using Firebase. 
 
 
+# MCQ TEST
  1. Write the correct answer from the following options and give an explanation (2-5 lines).
 let greeting;
 greetign = {};
